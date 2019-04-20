@@ -1,0 +1,4 @@
+
+ISPLIB=/work1/amemiya/Lib/ispack-0.96
+
+dclfrt fft_isp.f90 test.f90  -L$ISPLIB -lisp -traceback -CB

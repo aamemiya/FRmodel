@@ -1,0 +1,9 @@
+
+ISPLIB=/work1/amemiya/Lib/ispack-0.96
+NCDFINC=/usr/local/netcdf-fortran-4.2/include
+NCDFLIB=/usr/local/netcdf-fortran-4.2/lib
+
+DEBUG=' -traceback -CB'
+LARGE='-mcmodel=large -shared-intel'
+
+dclfrt -I$NCDFINC -I./include -o exe setup.f90 func.f90 util_eqw.f90 fft_isp.f90 init.f90 gill.f90 mkdir.f90 -L$NCDFLIB -lnetcdff -L$ISPLIB -lisp  $LARGE
