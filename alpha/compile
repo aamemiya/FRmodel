@@ -1,0 +1,8 @@
+ISPLIB=/work1/amemiya/Lib/ispack-0.96
+
+OPT_L='-lmkl_blas95_lp64 -lmkl_lapack95_lp64 -Wl,'
+OPT_L2='-lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -Wl,'
+###OPT_L3='-liomp5 -lpthread '
+OPT_L3=''
+
+dclfrt -I/work1/amemiya/Lib/pspline/mod main.f90 io.f90 frmodel_3d_general.f90 ql.f90 fft_isp.f90 inv_lap.f90 profile.f90 -o exe ${OPT_L} ${OPT_L2} ${OPT_L3} -L$ISPLIB -lisp -L/work1/amemiya/Lib/pspline/lib -lezcdf -lpspline -traceback -CB -mcmodel=large -shared-intel
