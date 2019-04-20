@@ -1,0 +1,8 @@
+ISPLIB=/work1/amemiya/Lib/ispack-0.96
+
+OPT_L='-lmkl_blas95_lp64 -lmkl_lapack95_lp64 -Wl,'
+OPT_L2='-lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -Wl,'
+###OPT_L3='-liomp5 -lpthread '
+OPT_L3=''
+
+dclfrt sample.f90 inv_lap.f90 -o smp ${OPT_L} ${OPT_L2} ${OPT_L3}  -traceback -CB -mcmodel=large -shared-intel
