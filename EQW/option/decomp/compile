@@ -1,0 +1,2 @@
+ISPLIB=/work1/amemiya/Lib/ispack-0.96
+dclfrt util.f90 main.f90 io.f90 decomp.f90 fft_isp.f90  ql.f90 -o dcmp -L$ISPLIB -lisp -traceback -CB -mcmodel=large -shared-intel -zero -fpe0

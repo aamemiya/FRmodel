@@ -1,0 +1,6 @@
+ISPLIB=/work1/amemiya/Lib/ispack-0.96
+
+OPT_L='-lmkl_blas95_lp64 -lmkl_lapack95_lp64 -Wl,'
+OPT_L2='-lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -Wl,'
+
+dclfrt setup.f90 EQW_hermite.f90 inv_lap.f90 -o eqwh  ${OPT_L} ${OPT_L2} -L$ISPLIB -lisp -traceback -CB -mcmodel=large -shared-intel
