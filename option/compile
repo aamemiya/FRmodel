@@ -1,0 +1,1 @@
+dclfrt -I/work1/amemiya/Lib/pspline/mod/ -I /home/amemiya/util/f90/ etopo1_init.f90 -L/work1/amemiya/Lib/pspline/lib -lezcdf -lpspline -traceback -CB 
