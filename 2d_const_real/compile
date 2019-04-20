@@ -1,0 +1,2 @@
+ISPLIB=/work1/amemiya/Lib/ispack-0.96
+dclfrt main.f90 io.f90 frmodel_2d_const.f90 ql.f90 fft_isp.f90 -o exe -L$ISPLIB -lisp -traceback -CB
